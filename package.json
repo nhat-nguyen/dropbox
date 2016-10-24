@@ -1,0 +1,49 @@
+{
+  "name": "nodejs-dropbox",
+  "version": "1.0.0",
+  "description": "A basic Dropbox clone to sync files across multiple remote folders.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon  --exec 'babel-node -- ./' -- ",
+    "client": "babel-node client.js",
+    "once": "babel-node -- ./",
+    "test": "mocha --compilers js:babel-register test/spec",
+    "dev": "run-p start watch:test watch:lint",
+    "clean": "rimraf dist",
+    "lint": "eslint ./",
+    "build": "babel ./ -o dist",
+    "watch:test": "nodemon --exec \"npm test || true\"",
+    "watch:lint": "nodemon --exec \"npm run lint || true\""
+  },
+  "author": "Nhat Nguyen",
+  "license": "MIT",
+  "dependencies": {
+    "archiver": "^1.1.0",
+    "babel-cli": "^6.16.0",
+    "babel-preset-nodev6": "^1.0.0",
+    "babel-register": "^6.14.0",
+    "body-parser": "^1.15.2",
+    "chokidar": "^1.6.1",
+    "decompress-zip": "^0.3.0",
+    "express": "^4.14.0",
+    "is-valid-path": "^0.1.1",
+    "json-socket": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "nodemon": "^1.10.2",
+    "npm": "^3.10.9",
+    "npm-run-all": "^3.1.0",
+    "nssocket": "^0.6.0",
+    "rimraf": "^2.5.4",
+    "songbird": "^1.0.4",
+    "trycatch": "^1.5.21",
+    "yargs": "^6.3.0"
+  },
+  "devDependencies": {
+    "rimraf": "^2.5.4",
+    "babel-eslint": "^7.0.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.7.0",
+    "eslint-config-noderiety": "^1.1.1",
+    "mocha": "^3.0.2"
+  }
+}
