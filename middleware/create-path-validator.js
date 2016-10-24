@@ -15,8 +15,7 @@ let internalError = {
 }
 
 module.exports = (req, res, next) => {
-    let filePath = path.join(process.cwd(), req.url)
-    fs.stat(filePath).then((stat, err) => {
+    fs.stat(req.filePath).then((stat, err) => {
         if (stat && !err) {
             res.status(405).json(pathExistsError)
         }
