@@ -34,5 +34,5 @@ Time spent: `14 hours`
 
 ## Walkthrough
 
-`<Add your Walkthrough Gif here (by updating the image URL)>`
-![Video Walkthrough](...)
+![VFS Walkthrough](walkthrough/vfs.gif)
+![Dropbox Walkthrough](walkthrough/sync.gif)
